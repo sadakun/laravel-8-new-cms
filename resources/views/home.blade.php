@@ -17,7 +17,7 @@
         </div>
         
         <div class="card-footer text-muted">
-            Posted on {{$post->created_at->format('d, M Y H:i')}} by
+            Posted on {{$post->created_at->format('d M Y').", ".$post->created_at->diffForHumans()}} by
             <a href="#">{{$post->user->name}}</a>
         </div>
     </div>
