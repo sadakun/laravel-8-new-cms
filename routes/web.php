@@ -31,3 +31,5 @@ Route::middleware('auth')->group(function()
     
     Route::delete('/admin/posts/{post}/delete', [App\Http\Controllers\PostController::class, 'delete'])->name('post.delete');
 });
+#example using "can" policies on route middleware
+// Route::get('/admin/posts/{post}/edit', [App\Http\Controllers\PostController::class, 'edit'])->middleware('can:view,post')->name('post.edit');
